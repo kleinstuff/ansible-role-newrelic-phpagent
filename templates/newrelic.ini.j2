@@ -7,9 +7,17 @@
 extension = "newrelic.so"
 
 [newrelic]
+{% if role_newrelic_licence is defined %}
 newrelic.license = "{{ role_newrelic_licence }} "
+{% else %}
+newrelic.licence = "NOT SET"
+{% endif %}
 newrelic.logfile = "/var/log/newrelic/php_agent.log"
-newrelic.appname = "{{ role_newrelic_appname }}"
+{% if role_newrelic_appname is defined %}
+newrelic.appname = "{{ role_newrelic_appname }} "
+{% else %}
+newrelic.appname = "NOT SET"
+{% endif %}
 newrelic.daemon.logfile = "/var/log/newrelic/newrelic-daemon.log"
 newrelic.daemon.port = "@newrelic-daemon"
 
