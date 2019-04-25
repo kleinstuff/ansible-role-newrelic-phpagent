@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/kleinstuff/ansible-newrelic-phpagent.png)](https://travis-ci.org/kleinstuff/ansible-newrelic-phpagent)
+[![Build Status](https://travis-ci.org/kleinstuff/ansible-role-newrelic-phpagent.png)](https://travis-ci.org/kleinstuff/ansible-role-newrelic-phpagent)
 
-kleinstuff.ansible_newrelic_phpagent
+kleinstuff.ansible_role_newrelic_phpagent
 =========
 
 Install NewRelic PHP Agent on RHEL/CentOS
@@ -30,7 +30,7 @@ Example Playbook
 ```
     - hosts: servers
       roles:
-        - { role: kleinstuff.ansible_newrelic_phpagent }
+        - { role: kleinstuff.ansible_role_newrelic_phpagent }
       vars:
         - role_newrelic_licence: "XXXXXXX"
         - role_newrelic_appname: "XXXXXXX"
