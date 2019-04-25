@@ -8,3 +8,8 @@
   yum:
     name: "{{ newrelic_packages }}"
     state: "present"
+
+- name: Configure newrelic agent
+  template:
+    src: newrelic.ini.j2
+    dest: /etc/php.d/newrelic.ini

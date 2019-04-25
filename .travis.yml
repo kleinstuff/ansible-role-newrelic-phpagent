@@ -20,7 +20,8 @@ script:
 
   # Ensure Repository and packages are installed.
   - 'docker exec --tty ${container_id} env TERM=xterm grep newrelic /etc/yum.repos.d/newrelic.repo'
-  - 'docker exec --tty ${container_id} env TERM=xterm if [ $(rpm -qa | grep newrelic | wc -l) -lt 3 ]; then exit 1 ; fi'
+  - 'docker exec --tty ${container_id} env TERM=xterm grep ANSIBLE /etc/php.d/newrelic.ini '
+  - 'docker exec --tty ${container_id} env TERM=xterm rpm -qa newrelic '
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
