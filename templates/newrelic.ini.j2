@@ -1,0 +1,9 @@
+extension = "newrelic.so"
+
+[newrelic]
+newrelic.license = "{{ role_newrelic_licence }} "
+newrelic.logfile = "/var/log/newrelic/php_agent.log"
+newrelic.appname = "{{ role_newrelic_appname }}"
+newrelic.daemon.logfile = "/var/log/newrelic/newrelic-daemon.log"
+newrelic.daemon.port = "@newrelic-daemon"
+

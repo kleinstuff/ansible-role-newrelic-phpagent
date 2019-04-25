@@ -1,0 +1,10 @@
+---
+- name: Install repo
+  yum:
+    name: "{{ newrelic_repo_rpm }}"
+    state: present
+
+- name: Install newrelic agent
+  yum:
+    name: "{{ newrelic_packages }}"
+    state: "present"

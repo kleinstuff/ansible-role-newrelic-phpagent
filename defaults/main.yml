@@ -1,0 +1,3 @@
+---
+newrelic_repo_rpm: "http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm"
+newrelic_packages: "newrelic-php5-common, newrelic-daemon, newrelic-php5"
