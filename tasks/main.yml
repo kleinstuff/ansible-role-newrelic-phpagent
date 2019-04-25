@@ -9,6 +9,14 @@
     name: "{{ newrelic_packages }}"
     state: "present"
 
+- name: Create /etc/php.d if it does not exists
+  file:
+    path: /etc/php.d
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Configure newrelic agent
   template:
     src: newrelic.ini.j2
