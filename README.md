@@ -15,8 +15,10 @@ No extra requirements needed.
 Role Variables
 --------------
 
-role_newrelic_licence: REQUIRED
-role_newrelic_appname: REQUIRED
+```
+ role_newrelic_licence: REQUIRED
+ role_newrelic_appname: REQUIRED
+```
 
 
 Dependencies
