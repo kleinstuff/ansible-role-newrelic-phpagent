@@ -21,3 +21,9 @@
   template:
     src: newrelic.ini.j2
     dest: /etc/php.d/newrelic.ini
+
+- name: set correct permissions on newrelic log
+  sefcontext:
+    target: '/var/log/newrelic(/.*)?'
+    setype: httpd_log_t
+    state: present
